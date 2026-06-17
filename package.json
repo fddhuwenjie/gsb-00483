@@ -1,0 +1,29 @@
+{
+  "name": "api-contract-tester",
+  "version": "1.0.0",
+  "description": "OpenAPI/Swagger based API contract testing CLI tool",
+  "main": "apicontract.js",
+  "bin": {
+    "apicontract": "./apicontract.js"
+  },
+  "scripts": {
+    "start:mock": "node mock-server.js",
+    "test:generate": "node apicontract.js generate openapi.yaml -o tests/",
+    "test:run": "node apicontract.js run openapi.yaml --base-url http://localhost:3000",
+    "test:report": "node apicontract.js report"
+  },
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "axios": "^1.6.0",
+    "commander": "^11.1.0",
+    "js-yaml": "^4.1.0",
+    "json-schema-faker": "^0.5.6",
+    "xmlbuilder2": "^3.1.1"
+  },
+  "devDependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
