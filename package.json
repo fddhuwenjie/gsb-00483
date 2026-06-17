@@ -10,7 +10,8 @@
     "start:mock": "node mock-server.js",
     "test:generate": "node apicontract.js generate openapi.yaml -o tests/",
     "test:run": "node apicontract.js run openapi.yaml --base-url http://localhost:3000",
-    "test:report": "node apicontract.js report"
+    "test:report": "node apicontract.js report",
+    "test:regression": "node test/regression.js"
   },
   "dependencies": {
     "ajv": "^8.12.0",
